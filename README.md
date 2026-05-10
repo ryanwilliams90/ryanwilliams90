@@ -2,24 +2,22 @@
 
 Distinguished Software Engineer @ Rapid7 — AI and data platforms at scale, security systems architecture.
 
-I work at the seam between AI runtimes and the security, reliability, and governance posture that real organizations need around them. Most of my recent thinking is about runtime boundaries, secure agent execution, agent identity, and the observability story for systems that don't fit standard stateless-API assumptions.
-
-This profile is a working set of architecture writeups and reference code, not a CV. The portfolio repo is the primary surface; the prototype repos are companion code so a reader can verify the patterns described in the case studies are grounded in working software.
+I work on the systems layer beneath AI products — orchestration boundaries, agent identity, runtime governance, provenance, deployment safety, and the operational control planes that make AI systems safe, observable, and accountable in production. My recent work focuses on the primitives this layer needs: where the runtime boundary lives, what unit of identity authorizes a tool call, what the audit chain attests to, and how a deployed artifact carries its own provenance.
 
 ## Where to read
 
-- **[Engineering portfolio](https://github.com/ryanwilliams90/portfolio)** — perspective piece, case studies, and architecture writeups. Structured as an architecture review, not a marketing site. Status declared at the top of each case study.
-- **[Orchestration gateway pattern](https://github.com/ryanwilliams90/orchestration-gateway-pattern)** — companion code to the gateway case study. Clean-room reference implementation of the async/sync executor-boundary pattern: `mypy --strict`, `ruff` clean, 80+ contract-driven tests including a real-uvicorn smoke test.
-- **[Agent identity / MCP credential plane](https://github.com/ryanwilliams90/agent-identity-mcp)** — companion code to the agent-identity case study. Ed25519-signed scoped credentials, gateway-mediated issuance, verifier structurally separated from tool code; demonstrates that a credential issued for one action cannot be used to call another.
+- **[Engineering portfolio](https://github.com/ryanwilliams90/portfolio)** — architecture studies and reference implementations across the operational substrate of production AI systems: runtime boundaries, agent identity, code-review orchestration, and provenance. Structured as architecture review, not marketing. Status declared at the top of each case study.
+- **[Orchestration gateway pattern](https://github.com/ryanwilliams90/orchestration-gateway-pattern)** — reference implementation of a production AI orchestration boundary. Async edge, bounded synchronous runtime, admission control, ContextVar propagation, lifecycle-scoped secrets, three-layer observability. `mypy --strict`, `ruff` clean, 90+ contract-driven tests including a real-uvicorn smoke test.
+- **[Agent identity / MCP credential plane](https://github.com/ryanwilliams90/agent-identity-mcp)** — reference credential plane for agentic systems. Ed25519-signed scoped credentials, verifier-side authorization separated from tool code, replay protection, audience binding, and tool-call identity boundaries. Demonstrates that a credential issued for one action cannot be used to call another.
 
-## Areas of focus
+## Focus areas
 
-- **AI orchestration and runtime systems** — gateways, model routing, runtime boundaries, agent execution
-- **Identity and credential planes** — agent identity, scoped credentials, MCP-compatible tool access
-- **Provenance and attestation** — cryptographic provenance for AI-assisted code, deployment governance
-- **Distributed data systems** — Apache Iceberg + Trino lakehouse architecture, retrieval and evaluation pipelines, large-scale security telemetry
-- **Operational reliability** — observability, failure modes, runtime concerns for AI systems in production
-- **Security systems** — SOC alert dispositioning, detection metadata enrichment, vulnerability risk scoring
+- **Production AI infrastructure** — orchestration gateways, runtime boundaries, admission control, operational contracts.
+- **Agent identity and authorization** — scoped credentials, action binding, verifier-side policy, replay resistance.
+- **AI-assisted SDLC governance** — review orchestration, provenance, attestation, deployment traceability.
+- **Supply-chain security** — SLSA, in-toto / DSSE, Sigstore, OCI referrers, VSA-style release verification, admission policy.
+- **Distributed data systems** — Apache Iceberg + Trino lakehouse architecture, retrieval and evaluation pipelines, large-scale security telemetry.
+- **Security systems** — SOC alert dispositioning, detection metadata enrichment, vulnerability risk scoring.
 
 ## How I work
 
