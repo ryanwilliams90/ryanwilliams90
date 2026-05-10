@@ -20,3 +20,7 @@ I work on the seam between AI runtimes and the security, reliability, and govern
 ## How I work
 
 Architecture-first. Constraints and failure modes drive design, not framework choices. I prefer narrow interfaces, explicit runtime boundaries, and systems that fail in observable ways.
+
+## Contact
+
+- LinkedIn: [ryan-williams-066b5a18](https://www.linkedin.com/in/ryan-williams-066b5a18/)
