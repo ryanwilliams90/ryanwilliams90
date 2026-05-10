@@ -8,8 +8,9 @@ This profile is a working set of architecture writeups and reference code, not a
 
 ## Where to read
 
-- **[Engineering portfolio](https://github.com/ryanwilliams90/portfolio)** — case studies, architecture writeups, and engineering notes. Structured as an architecture review, not a marketing site. Status (`Shipped` / `Prototype` / `Design`) is declared at the top of each case study.
+- **[Engineering portfolio](https://github.com/ryanwilliams90/portfolio)** — perspective piece, case studies, and architecture writeups. Structured as an architecture review, not a marketing site. Status declared at the top of each case study.
 - **[Orchestration gateway pattern](https://github.com/ryanwilliams90/orchestration-gateway-pattern)** — companion code to the gateway case study. Clean-room reference implementation of the async/sync executor-boundary pattern: `mypy --strict`, `ruff` clean, 80+ contract-driven tests including a real-uvicorn smoke test.
+- **[Agent identity / MCP credential plane](https://github.com/ryanwilliams90/agent-identity-mcp)** — companion code to the agent-identity case study. Ed25519-signed scoped credentials, gateway-mediated issuance, verifier structurally separated from tool code; demonstrates that a credential issued for one action cannot be used to call another.
 
 ## Areas of focus
 
